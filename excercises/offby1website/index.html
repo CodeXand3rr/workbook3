@@ -16,17 +16,22 @@
 
     <footer></footer>
     <script>
-      function init() {
-        const displayButton = document.getElementById("displayButton");
-        displayButton.onclick = displayDate;
-      }
+     
 
       function displayDate() {
        let messageParagraph = document.getElementById("messageParagraph")  
+       let dateInput = document.getElementById("dateInput")
+
+       let d = new Date(dateInput.value)
+
+       messageParagraph.innerText = d.toString; 
        messageParagraph.innerText="display"
       }
 
-      window.onload = init;
+      window.onload = function init() {
+        const displayButton = document.getElementById("displayButton");
+        displayButton.onclick = displayDate;
+      }
     </script>
   </body>
 </html>
