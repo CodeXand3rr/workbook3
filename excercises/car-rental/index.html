@@ -67,22 +67,28 @@
     </main>
 
     <script>
-        "use strict";
-        function init() {
-            let estimateButton = document.getElementById("estimateButton");
-            estimateButton.onclick = estimate
-        }
+      "use strict";
+      function init() {
+        let estimateButton = document.getElementById("estimateButton");
+        estimateButton.onclick = estimate;
+      }
 
-        window.onload = init;
+      window.onload = init;
 
-        function estimate() {
-            var numberOfDaysInput = document.getElementById("numberOfDaysInput")
-            var tollTagCheckbox = document.getElementById("tollTagCheckbox")
-            var gpsCheckbox = document.getElementById("gpsCheckbox")
-            var under25No = document.getElementById("under25No")
-            var under25Yes = document.getElementById("under25Yes")
-            console.log(`estimate`);
-        }
+      function estimate() {
+        var numberOfDaysInput = document.getElementById("numberOfDaysInput");
+        var tollTagCheckbox = document.getElementById("tollTagCheckbox");
+        var gpsCheckbox = document.getElementById("gpsCheckbox");
+        var under25No = document.getElementById("under25No");
+        var under25Yes = document.getElementById("under25Yes");
+
+        const carRentalTotalTD = document.getElementById("carRentalTotalTD");
+        const optionsTotalTD = document.getElementById("optionsTotalTD");
+        const under25TotalTD = document.getElementById("under25TotalTD");
+        const totalTD = document.getElementById("totalTD");
+
+        console.log(`estimate`);
+      }
     </script>
     <!-- <script
       src="https://dohliam.github.io/dropin-minimal-css/switcher.js"
