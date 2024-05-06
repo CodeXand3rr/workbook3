@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <main>
+      <h1>Ice Cream</h1>
+      <form>
+        <label for="numberOfScoopsInput">Number of Scoops</label>
+        <input type="number" id="numberOfScoopsInput" value=""/>
+
+        <fieldset>
+          <legend></legend>
+          <input type="radio" name="iceCreamCone" id="coneInput" />
+          <label for="pressCone">Cone</label>
+          <input type="radio" name="iceCreamCup" id="cupInput" />
+          <label for="pressCup">Cup</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Toppings</legend>
+          <label for="toppingsCheckbox">
+            <input type="checkbox" id="toppingsCheckbox" />
+            Sprinkles ($.50)
+          </label>
+          <label for="whippedCreamCheckbox">
+            <input type="checkbox" id="whippedCreamCheckbox" />
+            Whipped Cream ($0.25)
+          </label>
+          <label for="hotFudgeCheckbox">
+            <input type="checkbox" id="hotFudgeCheckbox" />
+            Hot Fudge ($1.25)
+          </label>
+          <label for="cherryCheckbox">
+            <input type="checkbox" id="cherryCheckbox" />
+            Cherry ($0.25)
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <button type="button" id="submitOrderButton">Submit Order</button>
+          <table class="totals">
+            <tbody>
+              <tr>
+                <td>Base Price:</td>
+                <td id="basePriceInput">xxx.xx</td>
+              </tr>
+              <tr>
+                <td>Tax:</td>
+                <td id="taxInput">xx.xx</td>
+              </tr>
+              <tr>
+                <td>Total Due:</td>
+                <td id="totalDueInput">xx.xx</td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+      </form>
+    </main>
+
+    <footer></footer>
+
+    <script>
+      "use strict";
+      function init() {
+        let submitOrderButton = document.getElementById("submitOrderButton");
+        submitOrderButton.onclick = submitOrder;
+      }
+
+      window.onload = init;
+
+      function submitOrder() {
+        const numberOfScoopsInput = document.getElementById("numberOfScoopsInput");
+        const coneInput = document.getElementById("coneInput");
+        const cupInput = document.getElementById("cupInput");
+        const toppingsCheckbox = document.getElementById("toppingsCheckbox");
+        const whippedCreamCheckbox = document.getElementById("whippedCreamCheckbox");
+        const hotFudgeCheckbox = document.getElementById("hotFudgeCheckbox");
+        const cherryCheckbox = document.getElementById("cherryCheckbox");
+
+        let numberOfScoops = numberOfScoopsInput.value
+        console.log(numberOfScoops)
+      }
+      
+    </script>
+  </body>
+</html>
